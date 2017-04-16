@@ -1,7 +1,7 @@
 {
   "engineSettings" : {
     "maxNumberOfRounds" : 1000,
-    "mapFile" : "/Users/robertmchardy/Documents/codebattle_sdk/data/maps/temptation.map",
+    "mapFile" : "/Users/robertmchardy/Documents/codebattle_sdk/data/maps/labyrinth.map",
     "startingResourceAmount" : 0,
     "resourceFieldCreateInterval" : 10,
     "resourceFieldInitialAmount" : 133,
@@ -45,7 +45,7 @@
     "debug" : false
   }, {
     "playerName" : "Opponent 1",
-    "pathToClientJar" : "/Users/robertmchardy/Documents/codebattle_sdk/data/clients/opponent_v1.jar",
+    "pathToClientJar" : "/Users/robertmchardy/Documents/Maven-Projekte/codebattle_sdk/data/clients/opponent_v1.jar",
     "debug" : false
   } ]
 }

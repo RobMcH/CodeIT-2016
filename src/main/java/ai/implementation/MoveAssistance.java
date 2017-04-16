@@ -12,10 +12,10 @@ import de.itdesign.codebattle.api.model.Unit;
 
 public class MoveAssistance {
 
-	private Graph graph;
+	public Graph graph;
 	private Field[][] map;
-	PriorityQueue<Node> openList = new PriorityQueue<Node>(50, MoveAssistance.nodeComparator);
-	HashSet<Node> closedList = new HashSet<Node>(50);
+	PriorityQueue<Node> openList = new PriorityQueue<Node>(100, MoveAssistance.nodeComparator);
+	HashSet<Node> closedList = new HashSet<Node>(100);
 	private static final Comparator<Node> nodeComparator = new Comparator<Node>() {
 
 		@Override
@@ -80,7 +80,7 @@ public class MoveAssistance {
 		this.graph.resetGraph();
 		Node currentNode = shortestPath(unit, target);
 
-		if (currentNode == null) {
+		if (currentNode == null || currentNode.getParent() == null) {
 			return Direction.STAY;
 		}
 

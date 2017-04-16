@@ -1,7 +1,6 @@
 package ai.implementation;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import de.itdesign.codebattle.api.codeinterface.CodeBattleClientImpl;
 import de.itdesign.codebattle.api.model.Base;
@@ -24,7 +23,6 @@ public class MyCodeBattleClient extends CodeBattleClientImpl {
 	private MoveAssistance moveAssistance;
 	private State state = new State();
 	private ArrayList<Position> enemyUnitPositions = new ArrayList<Position>(30);
-	private HashMap<Integer, Position> unitRes = new HashMap<Integer, Position>();
 
 	@Override
 	protected void processRound(ClientRoundState roundState) {
@@ -90,40 +88,33 @@ public class MyCodeBattleClient extends CodeBattleClientImpl {
 				}
 
 			}
+
 			Direction nextStep = null;
-			// Send warriors to the enemy base.
 			if (unitType == UnitType.WARRIOR) {
-				if (ownCollectorCount == 0) {
-					nextStep = this.moveAssistance.suggestDirection(unit, base.getPosition());			
-				} else if (numberOfEnemies > 0) {
+				// Send warriors to the enemy base.
+				if (numberOfEnemies > 0) {
 					nextStep = this.moveAssistance.suggestDirection(unit, getClosestEnemy(unitPos, enemyUnitPositions));
-				} else if (numberOfEnemies == 0 && !isUnitFull(unit)) {
-					Position resourcePosition = getResourcePosition(roundState, unit, resources);
-					if (resourcePosition != null) {
+				} else if ((numberOfEnemies == 0 || ownCollectorCount == 0) && !isUnitFull(unit)) {
+					Position resourcePosition = null;
+					while ((nextStep == null || nextStep == Direction.STAY) && !resources.isEmpty()) {
+						resourcePosition = getResourcePosition(roundState, unit, resources);
 						resources.remove(resourcePosition);
 						nextStep = this.moveAssistance.suggestDirection(unit, resourcePosition);
-					} else {
-						if (unitPos.getX() != base.getPosition().getX()
-								|| unitPos.getY() != base.getPosition().getY()) {
-							nextStep = this.moveAssistance.suggestDirection(unit, base.getPosition());
-						}
 					}
-				} else if ((numberOfEnemies == 0) && isUnitFull(unit)) {
+				} else {
 					nextStep = this.moveAssistance.suggestDirection(unit, base.getPosition());
 				}
 			} else if (unitType == UnitType.COLLECTOR) {
 				// Send collectors to collect resources.
 				Position resourcePosition = null;
-				if (this.unitRes.containsKey(unit.getUnitId())
-						&& this.state.getResources().contains(this.unitRes.get(unit.getUnitId()))) {
-					resourcePosition = this.unitRes.get(unit.getUnitId());
-				} else {
-					resourcePosition = getResourcePosition(roundState, unit, resources);
+				if (!isUnitFull(unit)) {
+					while ((nextStep == null || nextStep == Direction.STAY) && !resources.isEmpty()) {
+							resourcePosition = getResourcePosition(roundState, unit, resources);
+							resources.remove(resourcePosition);
+							nextStep = this.moveAssistance.suggestDirection(unit, resourcePosition);
+					}
 				}
-				if (!isUnitFull(unit) && resourcePosition != null) {
-					resources.remove(resourcePosition);
-					nextStep = this.moveAssistance.suggestDirection(unit, resourcePosition);
-				} else {
+				if (nextStep == null || nextStep == Direction.STAY) {
 					// Move unit back to base.
 					nextStep = this.moveAssistance.suggestDirection(unit, base.getPosition());
 				}
@@ -132,11 +123,11 @@ public class MyCodeBattleClient extends CodeBattleClientImpl {
 		}
 		this.enemyUnitPositions.clear();
 		long processEndTime = System.currentTimeMillis();
+
 		log("Processed round " + roundState.getRoundNumber() + " in " + (processEndTime - processStartTime) + " ms");
 	}
 
 	private Position getResourcePosition(ClientRoundState roundState, Unit unit, ArrayList<Position> resources) {
-
 		Position unitPos = unit.getPosition();
 		Position nearest = null;
 		if (resources.size() > 0) {

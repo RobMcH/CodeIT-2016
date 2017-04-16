@@ -6,7 +6,7 @@ import de.itdesign.codebattle.api.model.Position;
 
 public class State {
 	private int numberOfEnemies = 0;
-	private ArrayList<Position> resources = new ArrayList<Position>();
+	private ArrayList<Position> resources;
 	
 	public int getNumberOfEnemies() {
 		return numberOfEnemies;

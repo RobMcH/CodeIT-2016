@@ -1,0 +1,201 @@
+mapVersion=4
+{
+  "width" : 51,
+  "height" : 51,
+  "name" : "Labyrinth",
+  "basePositions" : {
+    "1" : {
+      "x" : 2,
+      "y" : 2
+    },
+    "2" : {
+      "x" : 48,
+      "y" : 2
+    },
+    "3" : {
+      "x" : 2,
+      "y" : 48
+    },
+    "4" : {
+      "x" : 48,
+      "y" : 48
+    }
+  },
+  "maxResources" : 11,
+  "resourceFields" : [ {
+    "x" : 26,
+    "y" : 25
+  }, {
+    "x" : 26,
+    "y" : 26
+  }, {
+    "x" : 23,
+    "y" : 23
+  }, {
+    "x" : 23,
+    "y" : 24
+  }, {
+    "x" : 23,
+    "y" : 25
+  }, {
+    "x" : 23,
+    "y" : 26
+  }, {
+    "x" : 24,
+    "y" : 23
+  }, {
+    "x" : 24,
+    "y" : 24
+  }, {
+    "x" : 24,
+    "y" : 25
+  }, {
+    "x" : 24,
+    "y" : 26
+  }, {
+    "x" : 25,
+    "y" : 23
+  }, {
+    "x" : 25,
+    "y" : 24
+  }, {
+    "x" : 25,
+    "y" : 25
+  }, {
+    "x" : 25,
+    "y" : 26
+  }, {
+    "x" : 26,
+    "y" : 23
+  }, {
+    "x" : 26,
+    "y" : 24
+  }, {
+    "x" : 26,
+    "y" : 27
+  }, {
+    "x" : 27,
+    "y" : 23
+  }, {
+    "x" : 27,
+    "y" : 24
+  }, {
+    "x" : 27,
+    "y" : 25
+  }, {
+    "x" : 27,
+    "y" : 26
+  }, {
+    "x" : 27,
+    "y" : 27
+  }, {
+    "x" : 23,
+    "y" : 27
+  }, {
+    "x" : 24,
+    "y" : 27
+  }, {
+    "x" : 25,
+    "y" : 27
+  }, {
+    "x" : 5,
+    "y" : 11
+  }, {
+    "x" : 5,
+    "y" : 12
+  }, {
+    "x" : 23,
+    "y" : 5
+  }, {
+    "x" : 24,
+    "y" : 5
+  }, {
+    "x" : 5,
+    "y" : 38
+  }, {
+    "x" : 5,
+    "y" : 39
+  }, {
+    "x" : 27,
+    "y" : 5
+  }, {
+    "x" : 26,
+    "y" : 45
+  }, {
+    "x" : 27,
+    "y" : 45
+  }, {
+    "x" : 23,
+    "y" : 45
+  }, {
+    "x" : 45,
+    "y" : 11
+  }, {
+    "x" : 45,
+    "y" : 12
+  }, {
+    "x" : 24,
+    "y" : 45
+  }, {
+    "x" : 45,
+    "y" : 38
+  }, {
+    "x" : 45,
+    "y" : 39
+  }, {
+    "x" : 26,
+    "y" : 5
+  } ],
+  "descriptors" : [ ]
+}
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+O                        O                        O
+O B                      O                      B O
+O                        O                        O
+O   OOOOOOOOOO  OOOOOOOOOOOOOOOOOOO  OOOOOOOOOO   O
+O   O        O  O     O  O  O     O  O        O   O
+O   O        O  O     O  O  O     O  O        O   O
+O   O  OOOO  O  O  O  O  O  O  O  O  O  OOOO  O   O
+O   O     O  O     O     O     O     O  O     O   O
+O   O     O  O     O     O     O     O  O     O   O
+O   OOOO  O  OOOOOOO  OOOOOOO  OOOOOOO  O  OOOO   O
+O   O     O        O     O     O        O     O   O
+O   O     O        O     O     O        O     O   O
+O   OOOOOOO  OOOO  O  O  O  O  O  OOOO  OOOOOOO   O
+O   O        O        O  O  O        O        O   O
+O   O        O        O  O  O        O        O   O
+O   O  OOOOOOO  OOOOOOOOOOOOOOOOOOO  OOOOOOO  O   O
+O   O     O  O     O     O     O     O  O     O   O
+O   O     O  O     O     O     O     O  O     O   O
+O   O  O  O  OOOO  O  O  O  O  O  OOOO  O  O  O   O
+O   O  O  O           O  O  O           O  O  O   O
+O   O  O  O           O  O  O           O  O  O   O
+O   O  O  OOOO  OOOOOOO  O  OOOOOOO  OOOO  O  O   O
+O      O     O  O                 O  O     O      O
+O      O     O  O                 O  O     O      O
+OOOOOOOOOOOOOO  O  ~~~~     ~~~~  O  OOOOOOOOOOOOOO
+O      O     O  O                 O  O     O      O
+O      O     O  O                 O  O     O      O
+O   O  O  OOOO  OOOOOOO  O  OOOOOOO  OOOO  O  O   O
+O   O  O  O           O  O  O           O  O  O   O
+O   O  O  O           O  O  O           O  O  O   O
+O   O  O  O  OOOO  O  O  O  O  O  OOOO  O  O  O   O
+O   O     O  O     O     O     O     O  O     O   O
+O   O     O  O     O     O     O     O  O     O   O
+O   O  OOOOOOO  OOOOOOOOOOOOOOOOOOO  OOOOOOO  O   O
+O   O        O        O  O  O        O        O   O
+O   O        O        O  O  O        O        O   O
+O   OOOOOOO  OOOO  O  O  O  O  O  OOOO  OOOOOOO   O
+O   O     O        O     O     O        O     O   O
+O   O     O        O     O     O        O     O   O
+O   OOOO  O  OOOOOOO  OOOOOOO  OOOOOOO  O  OOOO   O
+O   O     O  O     O     O     O     O  O     O   O
+O   O     O  O     O     O     O     O  O     O   O
+O   O  OOOO  O  O  O  O  O  O  O  O  O  OOOO  O   O
+O   O        O  O     O  O  O     O  O        O   O
+O   O        O  O     O  O  O     O  O        O   O
+O   OOOOOOOOOO  OOOOOOOOOOOOOOOOOOO  OOOOOOOOOO   O
+O                        O                        O
+O B                      O                      B O
+O                        O                        O
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO

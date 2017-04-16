@@ -1,0 +1,51 @@
+{
+  "engineSettings" : {
+    "maxNumberOfRounds" : 1000,
+    "mapFile" : "/Users/robertmchardy/Documents/codebattle_sdk/data/maps/temptation.map",
+    "startingResourceAmount" : 0,
+    "resourceFieldCreateInterval" : 10,
+    "resourceFieldInitialAmount" : 133,
+    "resourceFieldMinLifetimeInRounds" : 100,
+    "resourceFieldMaxLifetimeInRounds" : 500,
+    "moveTimeInMillis" : 500,
+    "unitStartAmount" : {
+      "WARRIOR" : 0,
+      "COLLECTOR" : 3,
+      "ARCHER" : 0
+    },
+    "unitCost" : {
+      "WARRIOR" : 100,
+      "COLLECTOR" : 50,
+      "ARCHER" : 120
+    },
+    "unitDamage" : {
+      "WARRIOR" : [ 50 ],
+      "COLLECTOR" : [ 10 ],
+      "ARCHER" : [ 5, 10, 20, 10, 5 ]
+    },
+    "unitMaxResources" : {
+      "WARRIOR" : 30,
+      "COLLECTOR" : 100,
+      "ARCHER" : 10
+    },
+    "unitAttackDistance" : {
+      "WARRIOR" : 1,
+      "COLLECTOR" : 1,
+      "ARCHER" : 5
+    },
+    "unitInitialHealth" : {
+      "WARRIOR" : 100,
+      "COLLECTOR" : 100,
+      "ARCHER" : 60
+    }
+  },
+  "gameClients" : [ {
+    "playerName" : "Your AI",
+    "pathToClientJar" : "/Users/robertmchardy/Documents/codebattle_sdk/target/codebattle_client-1.0-SNAPSHOT.jar",
+    "debug" : false
+  }, {
+    "playerName" : "Opponent 1",
+    "pathToClientJar" : "/Users/robertmchardy/Documents/codebattle_sdk/data/clients/opponent_v1.jar",
+    "debug" : false
+  } ]
+}

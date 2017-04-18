@@ -1,7 +1,7 @@
 {
   "engineSettings" : {
     "maxNumberOfRounds" : 1000,
-    "mapFile" : "/Users/robertmchardy/Documents/codebattle_sdk/data/maps/labyrinth.map",
+    "mapFile" : "/Users/robertmchardy/Documents/codebattle_sdk/data/maps/hidden-resources.map",
     "startingResourceAmount" : 0,
     "resourceFieldCreateInterval" : 10,
     "resourceFieldInitialAmount" : 133,

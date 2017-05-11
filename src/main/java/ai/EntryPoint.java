@@ -5,7 +5,7 @@ import de.itdesign.codebattle.client.CodeBattleEntryPoint;
 
 public class EntryPoint extends CodeBattleEntryPoint {
 
-    public static void main(String[] args) {
-        init(MyCodeBattleClient.class);
-    }
+	public static void main(String[] args) {
+		init(MyCodeBattleClient.class);
+	}
 }

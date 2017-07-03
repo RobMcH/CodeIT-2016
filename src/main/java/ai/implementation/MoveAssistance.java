@@ -12,7 +12,7 @@ import de.itdesign.codebattle.api.model.Unit;
 
 public class MoveAssistance {
 
-	public Graph graph;
+	private Graph graph;
 	private Field[][] map;
 	PriorityQueue<Node> openList = new PriorityQueue<Node>(100, MoveAssistance.nodeComparator);
 	HashSet<Node> closedList = new HashSet<Node>(100);
@@ -52,19 +52,16 @@ public class MoveAssistance {
 			this.closedList.add(currentNode);
 
 			for (Node adjacentNode : currentNode.getNeighbours()) {
-				if (this.closedList.contains(adjacentNode)
-						|| !this.map[adjacentNode.getPosition().getX()][adjacentNode.getPosition().getY()]
-								.isCrossable(unit)) {
+				if (!this.map[adjacentNode.getPosition().getX()][adjacentNode.getPosition().getY()].isCrossable(unit)
+						|| this.closedList.contains(adjacentNode)) {
 					continue;
-				} else if (this.openList.contains(adjacentNode)
-						&& (currentNode.getGCost() + 1) >= adjacentNode.getGCost()) {
+				} else if ((currentNode.getGCost() + 1) >= adjacentNode.getGCost()
+						&& this.openList.contains(adjacentNode)) {
 					continue;
 				}
 				adjacentNode.setParent(currentNode);
 				adjacentNode.setGCost(currentNode.getGCost() + 1);
-				if (this.openList.contains(adjacentNode)) {
-					this.openList.remove(adjacentNode);
-				}
+				this.openList.remove(adjacentNode);
 				adjacentNode.setHCost(target);
 				this.openList.add(adjacentNode);
 			}

@@ -24,8 +24,7 @@ public class Graph {
 		this.width = map[0].length;
 		for (int y = 0; y < map.length; y++) {
 			for (int x = 0; x < map[0].length; x++) {
-				String id = "Node_x" + x + "_y" + y;
-				this.nodes.add(new Node(id, Position.get(x, y)));
+				this.nodes.add(new Node(Position.get(x, y)));
 			}
 		}
 		int cx, cy, ox, oy;

@@ -1,17 +1,15 @@
 package ai.implementation;
 
-import java.util.ArrayList;
-
 import de.itdesign.codebattle.api.model.Position;
 
 public class Node {
 
-	final private String id;
 	private Position pos;
 	private int GCost = Integer.MAX_VALUE;
 	private int HCost = 0;
 	private Node parent;
-	private ArrayList<Node> neighbours = new ArrayList<Node>(4);
+	private Node[] neighbours = new Node[4];
+	private int neighbourCount = 0;
 
 	public int getGCost() {
 		return GCost;
@@ -37,13 +35,11 @@ public class Node {
 		this.HCost = this.pos.getDistance(target);
 	}
 
-	public Node(String id, Position pos) {
-		this.id = id;
+	public Node(Position pos) {
 		this.pos = pos;
 	}
 
-	public Node(String id, int GCost, int HCost, Position pos) {
-		this.id = id;
+	public Node(int GCost, int HCost, Position pos) {
 		this.GCost = GCost;
 		this.HCost = HCost;
 		this.pos = pos;
@@ -51,10 +47,7 @@ public class Node {
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		return result;
+		return this.neighbours.hashCode();
 	}
 
 	@Override
@@ -69,7 +62,7 @@ public class Node {
 		}
 
 		Node other = (Node) obj;
-		if (this.id.equals(other.id)) {
+		if (this.neighbours.equals(other.getNeighbours())) {
 			return true;
 		}
 		return false;
@@ -83,15 +76,12 @@ public class Node {
 		this.pos = pos;
 	}
 
-	public String getID() {
-		return this.id;
-	}
-
 	public void addNeighbour(Node neighbour) {
-		this.neighbours.add(neighbour);
+		this.neighbours[this.neighbourCount] = neighbour;
+		this.neighbourCount++;
 	}
 
-	public ArrayList<Node> getNeighbours() {
+	public Node[] getNeighbours() {
 		return this.neighbours;
 	}
 

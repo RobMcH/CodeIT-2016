@@ -1,7 +1,7 @@
 {
   "engineSettings" : {
-    "maxNumberOfRounds" : 1000,
-    "mapFile" : "/Users/robertmchardy/Documents/codebattle_sdk/data/maps/hidden-resources.map",
+    "maxNumberOfRounds" : 500,
+    "mapFile" : "/Users/robertmchardy/Documents/Maven-Projekte/codebattle_sdk/data/maps/labyrinth.map",
     "startingResourceAmount" : 0,
     "resourceFieldCreateInterval" : 10,
     "resourceFieldInitialAmount" : 133,
@@ -41,7 +41,7 @@
   },
   "gameClients" : [ {
     "playerName" : "Your AI",
-    "pathToClientJar" : "/Users/robertmchardy/Documents/codebattle_sdk/target/codebattle_client-1.0-SNAPSHOT.jar",
+    "pathToClientJar" : "/Users/robertmchardy/Documents/Maven-Projekte/codebattle_sdk/target/codebattle_client-1.0-SNAPSHOT.jar",
     "debug" : false
   }, {
     "playerName" : "Opponent 1",

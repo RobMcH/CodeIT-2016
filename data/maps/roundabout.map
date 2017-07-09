@@ -1,0 +1,60 @@
+mapVersion=4
+{
+  "width" : 23,
+  "height" : 23,
+  "name" : "Roundabout",
+  "basePositions" : {
+    "1" : {
+      "x" : 2,
+      "y" : 11
+    },
+    "2" : {
+      "x" : 20,
+      "y" : 11
+    }
+  },
+  "maxResources" : 6,
+  "resourceFields" : [ {
+    "x" : 12,
+    "y" : 3
+  }, {
+    "x" : 12,
+    "y" : 19
+  }, {
+    "x" : 11,
+    "y" : 3
+  }, {
+    "x" : 11,
+    "y" : 19
+  }, {
+    "x" : 10,
+    "y" : 3
+  }, {
+    "x" : 10,
+    "y" : 19
+  } ],
+  "descriptors" : [ ]
+}
+OOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOO       OOOOOOOO
+OOOOOO   OOOOO   OOOOOO
+OOOOO  ~ O   O ~  OOOOO
+OOOO     OO OO     OOOO
+OOO    OOOO OOOO    OOO
+OO    OOOOO OOOOO    OO
+OO ~ OOOOOO OOOOOO ~ OO
+O    OOOOOO OOOOOO    O
+O   OOOOO     OOOOO   O
+O   OOOOO ~~~ OOOOO   O
+O B       ~~~       B O
+O   OOOOO ~~~ OOOOO   O
+O   OOOOO     OOOOO   O
+O    OOOOOO OOOOOO    O
+OO ~ OOOOOO OOOOOO ~ OO
+OO    OOOOO OOOOO    OO
+OOO    OOOO OOOO    OOO
+OOOO     OO OO     OOOO
+OOOOO  ~ O   O ~  OOOOO
+OOOOOO   OOOOO   OOOOOO
+OOOOOOOO       OOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOO

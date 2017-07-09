@@ -1,0 +1,83 @@
+mapVersion=4
+{
+  "width" : 25,
+  "height" : 25,
+  "name" : "Private Way",
+  "basePositions" : {
+    "1" : {
+      "x" : 13,
+      "y" : 1
+    },
+    "2" : {
+      "x" : 11,
+      "y" : 1
+    }
+  },
+  "maxResources" : 8,
+  "resourceFields" : [ {
+    "x" : 12,
+    "y" : 14
+  }, {
+    "x" : 23,
+    "y" : 1
+  }, {
+    "x" : 1,
+    "y" : 1
+  }, {
+    "x" : 11,
+    "y" : 16
+  }, {
+    "x" : 12,
+    "y" : 16
+  }, {
+    "x" : 13,
+    "y" : 16
+  }, {
+    "x" : 11,
+    "y" : 23
+  }, {
+    "x" : 12,
+    "y" : 23
+  }, {
+    "x" : 13,
+    "y" : 23
+  }, {
+    "x" : 23,
+    "y" : 2
+  }, {
+    "x" : 1,
+    "y" : 2
+  }, {
+    "x" : 2,
+    "y" : 1
+  }, {
+    "x" : 22,
+    "y" : 1
+  } ],
+  "descriptors" : [ ]
+}
+OOOOOOOOOOOOOOOOOOOOOOOOO
+O          B B          O
+O OOOOOOOOO O OOOOOOOOO O
+O O         O         O O
+O O         O         O O
+O O  ~~    ~O~    ~~  O O
+O O ~~~~  ~~O~~  ~~~~ O O
+O O  ~~   ~~O~~   ~~  O O
+O O        ~~~        O O
+O O         ~         O O
+O O         ~         O O
+O O         ~         O O
+O O    O    ~    O    O O
+O O    OO   ~   OO    O O
+O O     OO     OO     O O
+O O  ~~  OOOOOOO  ~~  O O
+O O ~~~~         ~~~~ O O
+O O  ~~    OOO    ~~  O O
+O O        OOO        O O
+O O        OOO        O O
+O O        OOO        O O
+O O        OOO        O O
+O OOOOOO   OOO   OOOOOO O
+O                       O
+OOOOOOOOOOOOOOOOOOOOOOOOO

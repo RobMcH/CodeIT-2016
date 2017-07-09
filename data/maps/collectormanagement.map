@@ -1,0 +1,180 @@
+mapVersion=4
+{
+  "width" : 35,
+  "height" : 35,
+  "name" : "Collectormanagement",
+  "basePositions" : {
+    "1" : {
+      "x" : 2,
+      "y" : 2
+    },
+    "2" : {
+      "x" : 32,
+      "y" : 32
+    }
+  },
+  "maxResources" : 10,
+  "resourceFields" : [ {
+    "x" : 8,
+    "y" : 18
+  }, {
+    "x" : 8,
+    "y" : 19
+  }, {
+    "x" : 29,
+    "y" : 18
+  }, {
+    "x" : 29,
+    "y" : 19
+  }, {
+    "x" : 27,
+    "y" : 17
+  }, {
+    "x" : 25,
+    "y" : 15
+  }, {
+    "x" : 27,
+    "y" : 18
+  }, {
+    "x" : 25,
+    "y" : 16
+  }, {
+    "x" : 27,
+    "y" : 19
+  }, {
+    "x" : 25,
+    "y" : 17
+  }, {
+    "x" : 27,
+    "y" : 20
+  }, {
+    "x" : 25,
+    "y" : 18
+  }, {
+    "x" : 25,
+    "y" : 19
+  }, {
+    "x" : 9,
+    "y" : 17
+  }, {
+    "x" : 9,
+    "y" : 18
+  }, {
+    "x" : 9,
+    "y" : 19
+  }, {
+    "x" : 28,
+    "y" : 17
+  }, {
+    "x" : 26,
+    "y" : 15
+  }, {
+    "x" : 28,
+    "y" : 18
+  }, {
+    "x" : 26,
+    "y" : 16
+  }, {
+    "x" : 28,
+    "y" : 19
+  }, {
+    "x" : 26,
+    "y" : 17
+  }, {
+    "x" : 28,
+    "y" : 20
+  }, {
+    "x" : 26,
+    "y" : 18
+  }, {
+    "x" : 26,
+    "y" : 19
+  }, {
+    "x" : 26,
+    "y" : 20
+  }, {
+    "x" : 8,
+    "y" : 14
+  }, {
+    "x" : 8,
+    "y" : 15
+  }, {
+    "x" : 6,
+    "y" : 14
+  }, {
+    "x" : 8,
+    "y" : 16
+  }, {
+    "x" : 8,
+    "y" : 17
+  }, {
+    "x" : 6,
+    "y" : 15
+  }, {
+    "x" : 6,
+    "y" : 16
+  }, {
+    "x" : 6,
+    "y" : 17
+  }, {
+    "x" : 9,
+    "y" : 15
+  }, {
+    "x" : 7,
+    "y" : 14
+  }, {
+    "x" : 9,
+    "y" : 16
+  }, {
+    "x" : 7,
+    "y" : 15
+  }, {
+    "x" : 7,
+    "y" : 16
+  }, {
+    "x" : 7,
+    "y" : 17
+  }, {
+    "x" : 5,
+    "y" : 15
+  }, {
+    "x" : 5,
+    "y" : 16
+  } ],
+  "descriptors" : [ ]
+}
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+O                                 O
+O B                               O
+O    OOOOOOOOOOOOOOOOOOOOO~~~~~   O
+O     OOOOOOOOOOOOOOOOOOOO~~~~~~  O
+O  O   OOOOOOOOOOOOOOOOOOO~~~~~~  O
+O  OO   OOOOOOOOOOOOOOOOOO~~~~~~  O
+O  OOO   OOOOOO           ~~~~~~  O
+O  OOOO   OOOOO OOOO OOOO ~~~~~   O
+O  OOOOO   OOOO         O ~       O
+O  OOOOOO   OOOOOOOOOOO O ~       O
+O  OOOOOOO   OOOOOO     O ~~~~~~~~O
+O  OOOOOOOO   OOOOO OOOOO ~       O
+O  OOOOOOOO    OOOO     O ~       O
+O  OOO   OO O   OOOOOOO O ~OOOO   O
+O  OO     O OO   OOOOOO O  OOOOO  O
+O  OO     O OOO   OOOOO O  OOOOO  O
+O  OOO    O OOOO   OOOO O    OOO  O
+O  OOOOO  O OOOOO   OOO O     OO  O
+O  OOOOO  O OOOOOO   OO O     OO  O
+O   OOOO~ O OOOOOOO   O OO   OOO  O
+O       ~ O     OOOO    OOOOOOOO  O
+O       ~ OOOOO OOOOO   OOOOOOOO  O
+O~~~~~~~~ O     OOOOOO   OOOOOOO  O
+O       ~ O OOOOOOOOOOO   OOOOOO  O
+O       ~ O         OOOO   OOOOO  O
+O   ~~~~~ OOOO OOOO OOOOO   OOOO  O
+O  ~~~~~~           OOOOOO   OOO  O
+O  ~~~~~~OOOOOOOOOOOOOOOOOO   OO  O
+O  ~~~~~~OOOOOOOOOOOOOOOOOOO   O  O
+O  ~~~~~~OOOOOOOOOOOOOOOOOOOO     O
+O   ~~~~~OOOOOOOOOOOOOOOOOOOOO    O
+O                               B O
+O                                 O
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO

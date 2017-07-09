@@ -5,26 +5,13 @@ import de.itdesign.codebattle.api.model.Position;
 public class Node {
 
 	private Position pos;
-	private int GCost = Integer.MAX_VALUE;
-	private int HCost = 0;
 	private Node parent;
-	private Node[] neighbours = new Node[4];
+	private int HCost = 0;
 	private int neighbourCount = 0;
-
-	public int getGCost() {
-		return GCost;
-	}
-
-	public void setGCost(int GCost) {
-		this.GCost = GCost;
-	}
+	private Node[] neighbours = new Node[4];
 
 	public int getHCost() {
 		return this.HCost;
-	}
-
-	public int getFCost() {
-		return this.GCost + this.HCost;
 	}
 
 	public void setHCost(int HCost) {
@@ -39,8 +26,7 @@ public class Node {
 		this.pos = pos;
 	}
 
-	public Node(int GCost, int HCost, Position pos) {
-		this.GCost = GCost;
+	public Node(int HCost, Position pos) {
 		this.HCost = HCost;
 		this.pos = pos;
 	}
@@ -91,5 +77,10 @@ public class Node {
 
 	public Node getParent() {
 		return this.parent;
+	}
+	
+	public void reset() {
+		this.HCost = 0;
+		this.parent = null;
 	}
 }

@@ -43,9 +43,7 @@ public class Graph {
 
 	public void resetGraph() {
 		for (Node currentNode : this.nodes) {
-			currentNode.setGCost(Integer.MAX_VALUE);
-			currentNode.setHCost(0);
-			currentNode.setParent(null);
+			currentNode.reset();
 		}
 	}
 

@@ -20,9 +20,9 @@ public class MoveAssistance {
 
 		@Override
 		public int compare(Node o1, Node o2) {
-			if (o1.getFCost() < o2.getFCost()) {
+			if (o1.getHCost() < o2.getHCost()) {
 				return -1;
-			} else if (o1.getFCost() > o2.getFCost()) {
+			} else if (o1.getHCost() > o2.getHCost()) {
 				return 1;
 			}
 			return 0;
@@ -39,7 +39,6 @@ public class MoveAssistance {
 		this.closedList.clear();
 
 		Node start = this.graph.getNodeAt(unit.getPosition());
-		start.setGCost(0);
 		start.setHCost(target);
 		this.openList.add(start);
 
@@ -55,12 +54,11 @@ public class MoveAssistance {
 				if (!this.map[adjacentNode.getPosition().getX()][adjacentNode.getPosition().getY()].isCrossable(unit)
 						|| this.closedList.contains(adjacentNode)) {
 					continue;
-				} else if ((currentNode.getGCost() + 1) >= adjacentNode.getGCost()
+				} else if ((currentNode.getHCost() + 1) >= adjacentNode.getHCost()
 						&& this.openList.contains(adjacentNode)) {
 					continue;
 				}
 				adjacentNode.setParent(currentNode);
-				adjacentNode.setGCost(currentNode.getGCost() + 1);
 				this.openList.remove(adjacentNode);
 				adjacentNode.setHCost(target);
 				this.openList.add(adjacentNode);
@@ -76,38 +74,37 @@ public class MoveAssistance {
 	public Direction suggestDirection(Unit unit, Position target) {
 		this.graph.resetGraph();
 		Node currentNode = shortestPath(unit, target);
+		Direction suggestion = Direction.STAY;
 
 		if (currentNode == null || currentNode.getParent() == null) {
-			return Direction.STAY;
+			return suggestion;
 		}
 
 		Node unitNode = this.graph.getNodeAt(unit.getPosition());
 		while (!unitNode.equals(currentNode.getParent())) {
 			currentNode = currentNode.getParent();
 		}
-		Direction suggestion = Direction.STAY;
+		
+		int x = unit.getPosition().getX(), y = unit.getPosition().getY();
+		int dx = currentNode.getPosition().getX() - x;
+		int dy = currentNode.getPosition().getY() - y;
 
-		if (currentNode != null) {
-			int x = unit.getPosition().getX(), y = unit.getPosition().getY();
-			int dx = currentNode.getPosition().getX() - x;
-			int dy = currentNode.getPosition().getY() - y;
-
-			if (dy > 0) {
-				suggestion = Direction.SOUTH;
-				y++;
-			} else if (dy < 0) {
-				suggestion = Direction.NORTH;
-				y--;
-			} else if (dx > 0) {
-				suggestion = Direction.EAST;
-				x++;
-			} else if (dx < 0) {
-				suggestion = Direction.WEST;
-				x--;
-			}
-			this.map[x][y].setUnitOnField(unit);
-			this.map[unit.getPosition().getX()][unit.getPosition().getY()].setUnitOnField(null);
+		if (dy > 0) {
+			suggestion = Direction.SOUTH;
+			y++;
+		} else if (dy < 0) {
+			suggestion = Direction.NORTH;
+			y--;
+		} else if (dx > 0) {
+			suggestion = Direction.EAST;
+			x++;
+		} else if (dx < 0) {
+			suggestion = Direction.WEST;
+			x--;
 		}
+
+		this.map[x][y].setUnitOnField(unit);
+		this.map[unit.getPosition().getX()][unit.getPosition().getY()].setUnitOnField(null);
 		return suggestion;
 	}
 }

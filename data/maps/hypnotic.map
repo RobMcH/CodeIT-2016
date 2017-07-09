@@ -1,0 +1,116 @@
+mapVersion=4
+{
+  "width" : 41,
+  "height" : 41,
+  "name" : "Hypnotic",
+  "basePositions" : {
+    "1" : {
+      "x" : 20,
+      "y" : 4
+    },
+    "2" : {
+      "x" : 36,
+      "y" : 20
+    },
+    "3" : {
+      "x" : 4,
+      "y" : 20
+    },
+    "4" : {
+      "x" : 20,
+      "y" : 36
+    }
+  },
+  "maxResources" : 16,
+  "resourceFields" : [ {
+    "x" : 24,
+    "y" : 24
+  }, {
+    "x" : 28,
+    "y" : 28
+  }, {
+    "x" : 32,
+    "y" : 32
+  }, {
+    "x" : 36,
+    "y" : 36
+  }, {
+    "x" : 16,
+    "y" : 16
+  }, {
+    "x" : 12,
+    "y" : 12
+  }, {
+    "x" : 8,
+    "y" : 8
+  }, {
+    "x" : 4,
+    "y" : 4
+  }, {
+    "x" : 16,
+    "y" : 24
+  }, {
+    "x" : 12,
+    "y" : 28
+  }, {
+    "x" : 8,
+    "y" : 32
+  }, {
+    "x" : 4,
+    "y" : 36
+  }, {
+    "x" : 36,
+    "y" : 4
+  }, {
+    "x" : 32,
+    "y" : 8
+  }, {
+    "x" : 28,
+    "y" : 12
+  }, {
+    "x" : 24,
+    "y" : 16
+  } ],
+  "descriptors" : [ ]
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO~
+~O                                     O~
+~O OOOOOOOOOOOOOOOOO OOOOOOOOOOOOOOOOO O~
+~O O                B                O O~
+~O O OOOOOOOOOOOOOOO OOOOOOOOOOOOOOO O O~
+~O O O                             O O O~
+~O O O OOOOOOOOOOOOO OOOOOOOOOOOOO O O O~
+~O O O O                         O O O O~
+~O O O O OOOOOOOOOOO OOOOOOOOOOO O O O O~
+~O O O O O                     O O O O O~
+~O O O O O OOOOOOOOO OOOOOOOOO O O O O O~
+~O O O O O O                 O O O O O O~
+~O O O O O O OOOOOOO OOOOOOO O O O O O O~
+~O O O O O O O             O O O O O O O~
+~O O O O O O O OOOOO OOOOO O O O O O O O~
+~O O O O O O O O         O O O O O O O O~
+~O O O O O O O O OOO OOO O O O O O O O O~
+~O O O O O O O O O     O O O O O O O O O~
+~O O O O O O O O O OOO O O O O O O O O O~
+~O  B              O~O              B  O~
+~O O O O O O O O O OOO O O O O O O O O O~
+~O O O O O O O O O     O O O O O O O O O~
+~O O O O O O O O OOO OOO O O O O O O O O~
+~O O O O O O O O         O O O O O O O O~
+~O O O O O O O OOOOO OOOOO O O O O O O O~
+~O O O O O O O             O O O O O O O~
+~O O O O O O OOOOOOO OOOOOOO O O O O O O~
+~O O O O O O                 O O O O O O~
+~O O O O O OOOOOOOOO OOOOOOOOO O O O O O~
+~O O O O O                     O O O O O~
+~O O O O OOOOOOOOOOO OOOOOOOOOOO O O O O~
+~O O O O                         O O O O~
+~O O O OOOOOOOOOOOOO OOOOOOOOOOOOO O O O~
+~O O O                             O O O~
+~O O OOOOOOOOOOOOOOO OOOOOOOOOOOOOOO O O~
+~O O                B                O O~
+~O OOOOOOOOOOOOOOOOO OOOOOOOOOOOOOOOOO O~
+~O                                     O~
+~OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -12,7 +12,7 @@ import de.itdesign.codebattle.api.model.Unit;
 
 public class MoveAssistance {
 
-	private Graph graph;
+	private final Graph graph;
 	private Field[][] map;
 	PriorityQueue<Node> openList = new PriorityQueue<Node>(100, MoveAssistance.nodeComparator);
 	HashSet<Node> closedList = new HashSet<Node>(100);
@@ -29,9 +29,9 @@ public class MoveAssistance {
 		}
 	};
 
-	public MoveAssistance(ClientRoundState roundState) {
+	public MoveAssistance(ClientRoundState roundState, String playerName) {
 		this.map = roundState.getMap();
-		this.graph = new Graph(roundState);
+		this.graph = new Graph(roundState, playerName);
 	}
 
 	private Node shortestPath(Unit unit, Position target) {
@@ -49,7 +49,7 @@ public class MoveAssistance {
 				return currentNode;
 			}
 			this.closedList.add(currentNode);
-
+			
 			for (Node adjacentNode : currentNode.getNeighbours()) {
 				if (!this.map[adjacentNode.getPosition().getX()][adjacentNode.getPosition().getY()].isCrossable(unit)
 						|| this.closedList.contains(adjacentNode)) {
@@ -106,5 +106,9 @@ public class MoveAssistance {
 		this.map[x][y].setUnitOnField(unit);
 		this.map[unit.getPosition().getX()][unit.getPosition().getY()].setUnitOnField(null);
 		return suggestion;
+	}
+	
+	public Graph getGraph() {
+		return this.graph;
 	}
 }

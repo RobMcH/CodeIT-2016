@@ -7,7 +7,8 @@ public class Node {
 	private Position pos;
 	private Node parent;
 	private int HCost = 0;
-	private int neighbourCount = 0;
+	private char color = 'w';
+	private short neighbourCount = 0;
 	private Node[] neighbours = new Node[4];
 
 	public int getHCost() {
@@ -33,7 +34,7 @@ public class Node {
 
 	@Override
 	public int hashCode() {
-		return this.neighbours.hashCode();
+		return this.pos.hashCode();
 	}
 
 	@Override
@@ -70,6 +71,10 @@ public class Node {
 	public Node[] getNeighbours() {
 		return this.neighbours;
 	}
+	
+	public short getNeighbourCount() {
+		return this.neighbourCount;
+	}
 
 	public void setParent(Node parent) {
 		this.parent = parent;
@@ -82,5 +87,14 @@ public class Node {
 	public void reset() {
 		this.HCost = 0;
 		this.parent = null;
+		this.color = 'w';
+	}
+
+	public char getColor() {
+		return color;
+	}
+
+	public void setColor(char color) {
+		this.color = color;
 	}
 }

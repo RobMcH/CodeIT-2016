@@ -1,7 +1,7 @@
 {
   "engineSettings" : {
     "maxNumberOfRounds" : 500,
-    "mapFile" : "/Users/robertmchardy/Documents/Maven-Projekte/codebattle_sdk/data/maps/labyrinth.map",
+    "mapFile" : "/Users/robertmchardy/Documents/Maven-Projekte/codebattle_sdk/data/maps/treasure-island.map",
     "startingResourceAmount" : 0,
     "resourceFieldCreateInterval" : 10,
     "resourceFieldInitialAmount" : 133,

@@ -16,7 +16,7 @@ public class State {
 	public void setEnemyPositions(ArrayList<Position> enemyUnitPositions) {
 		this.enemyUnitPositions = enemyUnitPositions;
 	}
-	
+
 	public ArrayList<Position> getEnemyPositions() {
 		return this.enemyUnitPositions;
 	}
@@ -43,11 +43,11 @@ public class State {
 		this.resources.remove(nearest);
 		return nearest;
 	}
-	
+
 	public boolean hasResourcesLeft() {
 		return !this.resources.isEmpty();
 	}
-	
+
 	public Position getClosestEnemy(Position unitPos) {
 		Position nearest = enemyUnitPositions.get(0);
 		for (Position pos : enemyUnitPositions) {

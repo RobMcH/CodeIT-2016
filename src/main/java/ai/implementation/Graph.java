@@ -56,11 +56,22 @@ public class Graph {
 	public Node getNodeAt(Position pos) {
 		return this.nodes.get(pos.getY() * width + pos.getX());
 	}
-	
+
 	public void setState(State state, ClientRoundState roundState) {
 		ArrayList<Position> resources = new ArrayList<Position>(100);
 		ArrayList<Position> enemyUnitPositions = new ArrayList<>(30);
-		Node start = this.nodes.get(0);
+		Node start = null;
+		for (Node node : this.nodes) {
+			Position nodePos = node.getPosition();
+			FieldType nodeType = roundState.getMap()[nodePos.getX()][nodePos.getY()].getType();
+			if (nodeType == FieldType.BASE || nodeType == FieldType.LAND) {
+				start = node;
+				break;
+			}
+		}
+		if (start == null) {
+			return;
+		}
 		this.roundState = roundState;
 		setStateHelper(start, resources, enemyUnitPositions);
 
@@ -92,7 +103,6 @@ public class Graph {
 				}
 				setStateHelper(adjacentNode, resources, enemyUnitPositions);
 			}
-			currentNode.setColor('s');
 		}
 	}
 }

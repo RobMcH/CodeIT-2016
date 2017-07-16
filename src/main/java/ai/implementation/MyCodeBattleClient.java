@@ -30,7 +30,7 @@ public class MyCodeBattleClient extends CodeBattleClientImpl {
 		// The base contains all collected resources and hidden units.
 		Base base = roundState.getBase();
 		this.moveAssistance.getGraph().setState(this.state, roundState);
-		
+
 		int numberOfEnemies = this.state.getNumberOfEnemies();
 		int collectedResources = base.getStoredResources();
 		int collectorCost = getGameConfiguration().getUnitCost(UnitType.COLLECTOR);
@@ -112,6 +112,7 @@ public class MyCodeBattleClient extends CodeBattleClientImpl {
 				// Move unit back to base.
 				nextStep = this.moveAssistance.suggestDirection(unit, base.getPosition());
 			}
+			log("Moving unit " + unit + " towards " + nextStep);
 			unit.moveAggressively(nextStep);
 		}
 		long processEndTime = System.currentTimeMillis();
@@ -119,11 +120,9 @@ public class MyCodeBattleClient extends CodeBattleClientImpl {
 		log("Processed round " + roundState.getRoundNumber() + " in " + (processEndTime - processStartTime) + " ms");
 	}
 
-	
-
 	/**
-	 * @return true when the unit cannot collect any more resources. In that
-	 *         case they can be stored in your {@link Base}.
+	 * @return true when the unit cannot collect any more resources. In that case
+	 *         they can be stored in your {@link Base}.
 	 */
 	private boolean isUnitFull(Unit unit) {
 		return unit.getResourceCount() == getGameConfiguration().getUnitMaxResources(unit.getUnitType());

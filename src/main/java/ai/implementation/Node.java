@@ -71,7 +71,7 @@ public class Node {
 	public Node[] getNeighbours() {
 		return this.neighbours;
 	}
-	
+
 	public short getNeighbourCount() {
 		return this.neighbourCount;
 	}
@@ -83,7 +83,7 @@ public class Node {
 	public Node getParent() {
 		return this.parent;
 	}
-	
+
 	public void reset() {
 		this.HCost = 0;
 		this.parent = null;
